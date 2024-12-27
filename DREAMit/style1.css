@@ -68,8 +68,7 @@ body {
 }
 .container .slide-bar {
   grid-area: slide;
-  background-image: url(practice
-/IG/OIP\ \(5\).jpg);
+  background-image: url("practice\IG\OIP (5).jpg");
   filter: brightness(0.3);
   display: flex;
   padding-left: 10em;
