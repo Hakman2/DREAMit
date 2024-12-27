@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Nunito,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-template-rows: repeat(5, 150px);
+  background-color: whitesmoke;
+  gap: 20px;
+  justify-content: center;
+  grid-template-areas:
+    "nav    nav   nav   nav"
+    "slide  main    main    main"
+    "slide  main    main    main"
+    "slide  main    main    main"
+    "footer footer  footer  footer";
+}
+.container .nav {
+  grid-area: nav;
+  background-color: whitesmoke;
+  opacity: 0.9;
+  border-radius: 5px;
+  flex-direction: row;
+}
+.nav {
+  top: 50px;
+  display: flex;
+  gap: 35em;
+}
+
+.nav .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav .other {
+  gap: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .other a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12pt;
+  margin-right: 30px;
+  border-right: 1px solid whitesmoke;
+  z-index: 2;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.nav .other a:hover {
+  background-color: whitesmoke;
+  filter: brightness(0.4);
+  transition: 0.5s;
+  padding: 10px;
+  text-decoration: underline;
+}
+.container .slide-bar {
+  grid-area: slide;
+  background-image: url(/IG/OIP\ \(5\).jpg);
+  filter: brightness(0.3);
+  display: flex;
+  padding-left: 10em;
+  border-right: 1px solid #fff;
+}
+
+.container .main {
+  grid-area: main;
+  height: auto;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding-right: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.main header h1 {
+  margin-left: 50px;
+
+}
+.main .mainCase {
+  display: grid;
+  grid-template-columns: repeat(7, 100px);
+  grid-template-rows: repeat(auto-fill, 60px);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  grid-template-areas:
+    ".  . . . . ."
+    ".  remind remind  .  business  business"
+    ".  remind remind  .  business  business"
+    ".  remind remind  .  business  business"
+    ".  . chat chat .  .  ";
+}
+
+.container .main .mainCase .reminderCase {
+  grid-area: remind;
+  border: 1px solid wheat;
+  background-color: #fff;
+  max-height: 900px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s 
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1{
+  margin-top: 20px;
+}
+.container .main .mainCase .businessCase {
+  grid-area: business;
+  border: 1px solid wheat;
+  background-color: #fff;
+  max-height: 900px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s
+}
+.container .main .mainCase .chatCase {
+  grid-area: chat;
+  border: 1px solid wheat;
+  background-color: #fff;
+  max-height: 900px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-left: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s
+}
+
+.container .footer {
+  grid-area: footer;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  border-right: 1px solid #fff;
+}
+

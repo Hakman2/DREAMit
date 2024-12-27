@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.busix-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.busix-nav .nav {
+  /* grid-area: nav; */
+  background-color: whitesmoke;
+  border-radius: 5px;
+  flex-direction: row;
+  display: flex;
+  gap: 25em;
+  margin-top: 20px;
+}
+
+.nav .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav .other {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .other a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12pt;
+  margin-right: 30px;
+  border-right: 1px solid whitesmoke;
+  z-index: 2;
+}
+
+.nav .other a:hover {
+  background-color: whitesmoke;
+  filter: brightness(0.4);
+  transition: 0.5s;
+  padding: 10px;
+  text-decoration: underline;
+}
+.busix-container {
+  background-color: antiquewhite;
+  grid-area: busix;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(5, 150px);
+  grid-template-rows: repeat(auto-fill, 200px);
+  gap: 10px;
+  flex-direction: row;
+  /* box-sizing: border-box; */
+  margin: 30px;
+  grid-template-areas:
+    ".  card1  card1 card1 card1 card1  ."
+    ".  card2  card2 card2 card2 card2  ."
+    ".  card3  card3 card3 card3 card3  ."
+    ".  card4  card4 card4 card4 card4  ."
+    ".  card5  card5 card5 card5 card5  ."
+    ".  card6  card6 card6 card6 card6  ."
+    ".  card7  card7 card7 card7 card7  ."
+    ".  card8  card8 card8 card8 card8  ."
+    ".  card9  card9 card9 card9 card9  ."
+    ".  card0  card0 card0 card0 card0  .";
+}
+
+.busix-container .cards1,
+.cards2,
+.cards3,
+.cards4,
+.cards5,
+.cards6,
+.cards7,
+.cards8,
+.cards9,
+.cards0 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s
+}
+.border-render {
+  border-radius: 10px;
+}
+img {
+  width: 200px;
+  height: 200px;
+  display: flex;
+}
+.busix-container .item:hover {
+  border-radius: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.item {
+  transition: 0.2s;
+  filter: brightness(0.6);
+}
+
+.item:hover {
+  filter: brightness(1);
+  background-color: rgb(235, 217, 217);
+  border-radius: 10px;
+}
+
+.busix-container .cards1 {
+  grid-area: card1;
+  background-color: #fff;
+}
+.busix-container .cards2 {
+  grid-area: card2;
+  background-color: #fff;
+}
+
+.busix-container .cards3 {
+  grid-area: card3;
+  background-color: #fff;
+}
+.busix-container .cards4 {
+  grid-area: card4;
+  background-color: #fff;
+}
+.busix-container .cards5 {
+  grid-area: card5;
+  background-color: #fff;
+}
+.busix-container .cards6 {
+  grid-area: card6;
+  background-color: #fff;
+}
+.busix-container .cards7 {
+  grid-area: card7;
+  background-color: #fff;
+}
+.busix-container .cards8 {
+  grid-area: card8;
+  background-color: #fff;
+}
+.busix-container .cards9 {
+  grid-area: card9;
+  background-color: #fff;
+}
+.busix-container .cards0 {
+  grid-area: card0;
+  background-color: #fff;
+}
+
+.section {
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+/* 
+.busix-container .cards11 {
+  grid-area: card11;
+  background-color: #fff;
+}
+.busix-container .cards12 {
+  grid-area: card12;
+  background-color: #fff;
+}
+
+.busix-container .cards13 {
+  grid-area: card13;
+  background-color: #fff;
+}
+.busix-container .cards14 {
+  grid-area: card14;
+  background-color: #fff;
+}
+.busix-container .cards15 {
+  grid-area: card15;
+  background-color: #fff;
+}
+.busix-container .cards16 {
+  grid-area: card16;
+  background-color: #fff;
+}
+.busix-container .cards17 {
+  grid-area: card17;
+  background-color: #fff;
+}
+.busix-container .cards18 {
+  grid-area: card18;
+  background-color: #fff;
+}
+.busix-container .cards19 {
+  grid-area: card19;
+  background-color: #fff;
+}
+.busix-container .cards00 {
+  grid-area: card00;
+  background-color: #fff;
+} */
+.busix-container .footer {
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+#move {
+  margin-left: 10cm;
+}
