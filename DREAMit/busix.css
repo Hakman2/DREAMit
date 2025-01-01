@@ -17,7 +17,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  top: 50px;
+  display: flex;
+  box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 .busix-nav .nav {
@@ -28,6 +30,8 @@ body {
   display: flex;
   gap: 25em;
   margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #cdd1d070;
 }
 
 .nav .badge {
@@ -55,12 +59,16 @@ body {
 .nav .other a:hover {
   background-color: whitesmoke;
   filter: brightness(0.4);
-  transition: 0.5s;
+  transition: 0.2s;
   padding: 10px;
   text-decoration: underline;
 }
+h2 {
+  margin-right: 15em;
+  margin-top: 2rem;
+}
 .busix-container {
-  background-color: antiquewhite;
+  background-color: #cdd1d036;
   grid-area: busix;
   display: grid;
   justify-content: center;
@@ -72,16 +80,16 @@ body {
   /* box-sizing: border-box; */
   margin: 30px;
   grid-template-areas:
-    ".  card1  card1 card1 card1 card1  ."
-    ".  card2  card2 card2 card2 card2  ."
-    ".  card3  card3 card3 card3 card3  ."
-    ".  card4  card4 card4 card4 card4  ."
-    ".  card5  card5 card5 card5 card5  ."
-    ".  card6  card6 card6 card6 card6  ."
-    ".  card7  card7 card7 card7 card7  ."
-    ".  card8  card8 card8 card8 card8  ."
-    ".  card9  card9 card9 card9 card9  ."
-    ".  card0  card0 card0 card0 card0  .";
+    "card1   card1 card1 card1 card1  .  ."
+    "card2   card2 card2 card2 card2  .  ."
+    "card3   card3 card3 card3 card3  .  ."
+    "card4   card4 card4 card4 card4  .  ."
+    "card5   card5 card5 card5 card5  .  ."
+    "card6   card6 card6 card6 card6  .  ."
+    "card7   card7 card7 card7 card7  .  ."
+    "card8   card8 card8 card8 card8  .  ."
+    "card9   card9 card9 card9 card9  .  ."
+    "card0   card0 card0 card0 card0  .  .";
 }
 
 .busix-container .cards1,
@@ -98,13 +106,13 @@ body {
   justify-content: start;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s
+  transition: background-color 0.3s;
 }
 .border-render {
   border-radius: 10px;
 }
 img {
-  width: 200px;
+  width: 250px;
   height: 200px;
   display: flex;
 }
@@ -220,5 +228,5 @@ img {
   align-items: center;
 }
 #move {
-  margin-left: 10cm;
+  margin-left: 20px;
 }

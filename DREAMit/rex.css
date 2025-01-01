@@ -1,56 +1,81 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  #app {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1, h2 {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007BFF;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-top: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+input, button {
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
     text-align: center;
   }
-  
-  #reminder-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+  nav a {
+    display: block;
+    margin: 5px 0;
   }
-  
-  input, textarea, button {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+  input, button {
+    width: 100%;
+    margin: 5px 0;
   }
-  
-  button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  #reminder-list div {
-    border: 1px solid #ccc;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  #reminder-list h3 {
-    color: #007BFF;
-  }
+}

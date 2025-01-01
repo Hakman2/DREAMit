@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Nunito,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
 }
 
 body {
@@ -20,11 +22,13 @@ body {
     "slide  main    main    main"
     "slide  main    main    main"
     "slide  main    main    main"
+    "slide  main    main    main"
     "footer footer  footer  footer";
 }
 .container .nav {
   grid-area: nav;
-  background-color: whitesmoke;
+  background-color: rgba(235, 234, 234, 0.26);
+  box-shadow: 10px 8px 10px rgba(10, 5, 5, 0.1);
   opacity: 0.9;
   border-radius: 5px;
   flex-direction: row;
@@ -32,7 +36,7 @@ body {
 .nav {
   top: 50px;
   display: flex;
-  gap: 35em;
+  gap: 30em;
 }
 
 .nav .badge {
@@ -68,11 +72,11 @@ body {
 }
 .container .slide-bar {
   grid-area: slide;
-  background-image: url("practice\IG\OIP (5).jpg");
+  background-image: url("IG/");
   filter: brightness(0.3);
   display: flex;
   padding-left: 10em;
-  border-right: 1px solid #fff;
+  border-right: 0.5px solid #ffffffa6;
 }
 
 .container .main {
@@ -82,10 +86,12 @@ body {
   border-right: 1px solid #fff;
   padding-right: 50px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #cdd1d070;
+  /* filter: brightness(0.2); */
+  /* opacity: .8; */
 }
 .main header h1 {
   margin-left: 50px;
-
 }
 .main .mainCase {
   display: grid;
@@ -93,24 +99,25 @@ body {
   grid-template-rows: repeat(auto-fill, 60px);
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
+  padding-bottom: 30px;
   grid-template-areas:
     ".  . . . . ."
-    ".  remind remind  .  business  business"
-    ".  remind remind  .  business  business"
-    ".  remind remind  .  business  business"
-    ".  . chat chat .  .  ";
+    ".  remind remind business  business  ."
+    ".  remind remind business  business  ."
+    ".  remind remind business  business  ."
+    ".  . chat chat .  .  "
+    ".  . chat chat .  .  "
+    ".  . . . . .";
 }
 
 .container .main .mainCase .reminderCase {
   grid-area: remind;
-  border: 1px solid wheat;
-  background-color: #fff;
   max-height: 900px;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s 
+  transition: background-color 0.3s;
 }
 
 header {
@@ -118,29 +125,25 @@ header {
   justify-content: center;
   align-items: center;
 }
-header h1{
+header h1 {
   margin-top: 20px;
 }
 .container .main .mainCase .businessCase {
   grid-area: business;
-  border: 1px solid wheat;
-  background-color: #fff;
   max-height: 900px;
   box-sizing: border-box;
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s
+  transition: background-color 0.3s;
 }
 .container .main .mainCase .chatCase {
   grid-area: chat;
-  border: 1px solid wheat;
-  background-color: #fff;
   max-height: 900px;
   box-sizing: border-box;
   border-radius: 5px;
   margin-left: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s
+  transition: background-color 0.3s;
 }
 
 .container .footer {
@@ -151,4 +154,3 @@ header h1{
   align-items: last baseline;
   border-right: 1px solid #fff;
 }
-
