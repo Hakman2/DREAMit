@@ -9,34 +9,35 @@
 body {
   display: flex;
   justify-content: center;
+
 }
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 250px);
-  grid-template-rows: repeat(5, 150px);
+  grid-template-columns: repeat(2, 250px);
+  grid-template-rows: repeat(auto-fill, 100px);
   background-color: whitesmoke;
   gap: 20px;
+  height: 20%;
   justify-content: center;
   grid-template-areas:
     "nav    nav   nav   nav"
-    "slide  main    main    main"
-    "slide  main    main    main"
-    "slide  main    main    main"
-    "slide  main    main    main"
+    "slide  main    main  ."
+    "slide  main    main  ."
     "footer footer  footer  footer";
 }
 .container .nav {
   grid-area: nav;
-  background-color: rgba(235, 234, 234, 0.26);
+  background-color: rgba(0, 0, 0, 0.692);
   box-shadow: 10px 8px 10px rgba(10, 5, 5, 0.1);
   opacity: 0.9;
   border-radius: 5px;
   flex-direction: row;
 }
 .nav {
-  top: 50px;
+  margin-top: 20px;
   display: flex;
   gap: 30em;
+  height: 70px;
 }
 
 .nav .badge {
@@ -44,6 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  color: #f8f8f8;
 }
 
 .nav .other {
@@ -54,7 +56,7 @@ body {
 }
 .nav .other a {
   text-decoration: none;
-  color: #000;
+  color: #f8f8f8;
   font-size: 12pt;
   margin-right: 30px;
   border-right: 1px solid whitesmoke;
@@ -63,22 +65,40 @@ body {
   flex-grow: 1;
 }
 
-.nav .other a:hover {
-  background-color: whitesmoke;
-  filter: brightness(0.4);
+.nav .other a:is(:hover, :focus) {
+  /* background-color: whitesmoke;
+  filter: brightness(0.8); */
   transition: 0.5s;
   padding: 10px;
   text-decoration: underline;
 }
+
 .container .slide-bar {
   grid-area: slide;
-  background-image: url("IG/");
-  filter: brightness(0.3);
-  display: flex;
-  padding-left: 10em;
-  border-right: 0.5px solid #ffffffa6;
+  background-color: rgba(73, 72, 72, 0.24);
+  width: 200px;
+  display: block;
 }
 
+#btn {
+  background-color: #4e4b4b00;
+  color: #080808;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 100%;
+  padding-top: 30px;
+  margin-top: 50px;
+}
+
+#btn:is(:hover, :focus){
+   background-color: whitesmoke;
+  filter: brightness(0.8);
+  transition: 0.5s;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
 .container .main {
   grid-area: main;
   height: auto;
@@ -95,7 +115,7 @@ body {
 }
 .main .mainCase {
   display: grid;
-  grid-template-columns: repeat(7, 100px);
+  grid-template-columns: repeat(5, 100px);
   grid-template-rows: repeat(auto-fill, 60px);
   justify-content: center;
   align-items: center;

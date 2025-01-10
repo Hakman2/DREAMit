@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reminder App</title>
-  <link rel="stylesheet" href="rex.css">
-</head>
-<body>
-  <div id="app">
-    <h1>Reminder App</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reminder App</title>
+    <link rel="stylesheet" href="rex.css" />
+  </head>
+  <body>
+    <div class="container-rex">
+      <div class="slide-bar">
+        <h2>Rex</h2>
+        <button id="btn"><a href="index.html">Home</a></button>
+        <button id="btn"><a href="busix.html">Business</a></button>
+        <button id="btn"  onclick="loadSection('dash')" >Dashboard</button>
+        <button id="btn"  onclick="loadSection('active')" >Active</button>
+        <button id="btn"  onclick="loadSection('ask')" >Ask here</button>
+      </div>
 
-    <section id="reminder-section">
-      <h2>Set a Reminder</h2>
-      <form id="reminder-form">
-        <input type="text" id="title" placeholder="Reminder Title" required />
-        <textarea id="description" placeholder="Description"></textarea>
-        <input type="datetime-local" id="date-time" required />
-        <button type="submit">Add Reminder</button>
-      </form>
-      <button id="clear-all">Clear All Reminders</button>
-    </section>
 
-    <section id="reminder-list-section">
-      <h2>All Reminders</h2>
-      <div id="reminder-list"></div>
-    </section>
-  </div>
+      <div id="app">
 
-  <script src="rexJ.js"></script>
-</body>
+
+      <div id="Dashboard-section" class="section hidden">
+        <h2>Dash-board</h2>
+        
+        <div id="no-recent-message" class="hidden">No recent contacts.</div>
+      </div>
+
+
+
+
+      <div id="active-section" class="section hidden">
+        <h2>Active Reminder</h2>
+        <div id="no-recent-message" class="hidden">No recent contacts.</div>
+        <ul id="recent-list"></ul>
+      </div>
+
+
+
+
+      <div id="FQA-section" class="section hidden">
+        <h2>You have alot to ask, right? </h2>
+        <div id="no-recent-message" class="hidden">No recent contacts.</div>
+        <ul id="recent-list"></ul>
+      </div>
+     </div>
+    </div>
+
+    <script src="rexJ.js"></script>
+  </body>
 </html>

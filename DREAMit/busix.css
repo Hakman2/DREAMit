@@ -17,21 +17,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 50px;
+  margin-top: 10px;
   display: flex;
   box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 .busix-nav .nav {
   /* grid-area: nav; */
-  background-color: whitesmoke;
   border-radius: 5px;
   flex-direction: row;
   display: flex;
   gap: 25em;
-  margin-top: 20px;
+  height: 80px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #cdd1d070;
+  background-color: rgba(0, 0, 0, 0.692);
 }
 
 .nav .badge {
@@ -39,6 +38,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  color: #f8f8f8;
+
 }
 
 .nav .other {
@@ -48,17 +49,15 @@ body {
   align-items: center;
 }
 .nav .other a {
+  color: #f8f8f8;
   text-decoration: none;
-  color: #000;
   font-size: 12pt;
   margin-right: 30px;
   border-right: 1px solid whitesmoke;
   z-index: 2;
 }
 
-.nav .other a:hover {
-  background-color: whitesmoke;
-  filter: brightness(0.4);
+.nav .other a:is(:hover,:focus) {
   transition: 0.2s;
   padding: 10px;
   text-decoration: underline;
@@ -73,7 +72,7 @@ h2 {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(5, 150px);
+  grid-template-columns: repeat(auto-fill, 150px);
   grid-template-rows: repeat(auto-fill, 200px);
   gap: 10px;
   flex-direction: row;
@@ -229,4 +228,21 @@ img {
 }
 #move {
   margin-left: 20px;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  input,
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
