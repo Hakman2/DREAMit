@@ -13,15 +13,11 @@ body {
   background-color: #f8f8f8;
   display: grid;
   max-height: 750px;
-  grid-template-columns: repeat(2, 250px);
-  grid-template-rows: repeat(auto-fill, 250px);
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas: 
-  "slide  main main main"
-  "slide  main main main"
-  "slide  main main main"
-  "slide  main main main"
-  "slide  main main main"
-  ;
+    "nav nav"
+    "slide main";
 }
 section {
   margin-top: 20px;
@@ -37,41 +33,60 @@ section {
   opacity: 1;
   pointer-events: auto;
 }
+.nav {
+  grid-area: nav;
+  height: 80px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.692);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav button, .nav a {
+  color: #f8f8f8;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav button:hover, .nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 .slide-bar {
-  background-color: rgba(0, 0, 0, 0.692);
-  width: 250px;
-  display: block;
   grid-area: slide;
-
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.692);
+  color: #f8f8f8;
 }
 
-.slide-bar h2{
-  margin: 20px 40%;
-  color: #f8f8f8;
+.slide-bar h2 {
+  margin-bottom: 20px;
 }
 #btn {
-  background-color: #00000000;
-  color: #f8f8f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  padding-top: 30px;
-  margin-top: 50px;
-}
-#btn a{
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
   color: #f8f8f8;
-  text-decoration: none;
+  border: 1px solid #f8f8f8;
+  cursor: pointer;
 }
-#btn:is(:hover, :focus){
-  transition: .5s;
-  padding-left: 2px;
+
+#btn:hover {
+  background-color: #0056b3;
 }
-#app{
+
+#app {
   grid-area: main;
+  padding: 20px;
+  margin-top: 0;
   background-color: #fff;
-  margin-left: 0;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 input,
@@ -91,5 +106,39 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+#Dashboard-section {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  flex: 1;
+  background-color: #ECF0F1;
+  padding: 20px;
+  overflow-y: auto;
+}
 
+.header {
+  background-color: #3498DB;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+}

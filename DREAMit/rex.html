@@ -8,10 +8,12 @@
   </head>
   <body>
     <div class="container-rex">
+      <div class="nav">        
+        <button ><a href="busix.html">Business</a></button>
+        <button ><a href="index.html">Home</a></button>
+      </div>
       <div class="slide-bar">
         <h2>Rex</h2>
-        <button id="btn"><a href="index.html">Home</a></button>
-        <button id="btn"><a href="busix.html">Business</a></button>
         <button id="btn"  onclick="loadSection('dash')" >Dashboard</button>
         <button id="btn"  onclick="loadSection('active')" >Active</button>
         <button id="btn"  onclick="loadSection('ask')" >Ask here</button>
@@ -19,12 +21,28 @@
 
 
       <div id="app">
-
-
       <div id="Dashboard-section" class="section hidden">
-        <h2>Dash-board</h2>
         
-        <div id="no-recent-message" class="hidden">No recent contacts.</div>
+    <div class="main-content">
+      <div class="header">
+          <h1>Welcome to the Dashboard</h1>
+      </div>
+
+      <div class="card-container">
+          <div class="card">
+              <h3>Total Users</h3>
+              <p>1,234</p>
+          </div>
+          <div class="card">
+              <h3>Active Sessions</h3>
+              <p>567</p>
+          </div>
+          <div class="card">
+              <h3>Revenue</h3>
+              <p>$12,345</p>
+          </div>
+      </div>
+  </div>
       </div>
 
 
