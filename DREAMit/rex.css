@@ -17,6 +17,7 @@ body {
   grid-template-rows: auto 1fr;
   grid-template-areas: 
     "nav nav"
+    "slide main"
     "slide main";
 }
 section {
@@ -63,6 +64,7 @@ section {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.692);
   color: #f8f8f8;
+  height: 569px;
 }
 
 .slide-bar h2 {
@@ -74,13 +76,13 @@ section {
   margin-bottom: 10px;
   background-color: transparent;
   color: #f8f8f8;
-  border: 1px solid #f8f8f8;
+  /* border: 1px solid #f8f8f8; */
   cursor: pointer;
 }
 
 #btn:hover {
-  background-color: #0056b3;
-}
+  transition: 0.5s;
+  padding: 10px;}
 
 #app {
   grid-area: main;
@@ -96,7 +98,7 @@ button {
   font-size: 16px;
 }
 
-button {
+.slide-bar button {
   background-color: #007bff;
   color: white;
   border: none;

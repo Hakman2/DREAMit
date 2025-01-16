@@ -116,7 +116,6 @@ img {
   display: flex;
 }
 .busix-container .item:hover {
-  border-radius: 5px;
   padding: 5px;
   border-radius: 10px;
 }
